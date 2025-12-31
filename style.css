@@ -1,5 +1,9 @@
+* { box-sizing: border-box; }
+img { max-width: 100%; height: auto; display: block; }
+
 html, body {
-  height: 100%;
+  width: 100%;
+  min-height: 100vh;
   margin: 0;
   background-image: url("immagini/blu.jpg");   
   background-size: cover;            
@@ -13,23 +17,31 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 16px;
+  max-width: 100%;
+  padding: 0 12px;
+  flex-wrap: nowrap;
 }
 
 /* logo */
 .logo-title img {
   height: 60px;      
   width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 /* testo titolo */
 .logo-title span {
   font-size: 2.4rem;
   font-weight: 700;
-  color: white;        
+  color: white; 
+  white-space: nowrap;
 }
 
 /*box testo con immagine */
 .image-box {
+  width: calc(100% - 24px);
   max-width: 700px;
   margin: 30px auto;
   padding: 25px 30px;
@@ -110,3 +122,71 @@ html, body {
 .download-card .card-body {
   padding: 32px 28px;
 }
+
+/* per adattare la pagina ai diversi dispositivi */
+@media (max-width: 768px) {
+  /* fix mobile per background fixed (su molti telefoni non rende bene) */
+  html, body { background-attachment: scroll; }
+  /* titolo + logo: riduzione proporzioni */
+  .logo-title { 
+    gap: 10px; 
+    padding: 0 12px;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .logo-title img { 
+    height: 48px; 
+    max-width: 30vw;
+    object-fit: contain;
+  }
+
+  .logo-title span { 
+    font-size: 2rem; 
+    white-space: nowrap;
+  } 
+    .image-box { 
+      padding: 18px; 
+      width: calc(100% - 24px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* titolo + logo fix */
+    .logo-title { 
+      gap: 8px;
+      padding: 0 12px;
+      justify-content: center;
+      max-width: 100%;
+      overflow: hidden; /* rete di sicurezza se qualcosa sfora */
+    }
+
+    .logo-title img { 
+      height: 36px;
+      max-width: 28vw; 
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .logo-title span { 
+      font-size: 1.45rem;
+      white-space: nowrap; 
+    }
+
+    /* box principale */
+    .image-box { 
+      padding: 14px; 
+      margin: 18px auto; 
+      width: calc(100% - 24px);
+    }
+
+    /* testo */
+    .text-box p { 
+      font-size: 1rem; 
+    }
+
+    /* download card */
+    .download-card { 
+      width: 95%; 
+    }
+  }
