@@ -1,0 +1,112 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-image: url("immagini/blu.jpg");   
+  background-size: cover;            
+  background-position: center;       
+  background-repeat: no-repeat;       
+  background-attachment: fixed; 
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* logo */
+.logo-title img {
+  height: 60px;      
+  width: auto;
+}
+
+/* testo titolo */
+.logo-title span {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: white;        
+}
+
+/*box testo con immagine */
+.image-box {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  background-image: url("immagini/grano.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.image-box > * {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+/*overlay soffuso */
+.image-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15); /* più alto = più soffuso */
+  border-radius: 16px;
+}
+
+/* porta il testo sopra*/
+.text-box p {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1.15rem;
+  margin: 0;
+  text-align: left;
+}
+
+/*style download */
+.text-box a {
+  color: yellow;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.text-box a:hover {
+  color: white;
+}
+
+
+/* testo descrittivo */
+ .intro h2 {
+   color: white;
+   font-weight: 700;
+ }
+
+.intro h3 {
+   color: white;
+   font-weight: 700;
+ }
+
+ .intro p {
+   font-size: 1.05rem;
+   line-height: 1.6;
+   color: white;
+ }
+
+/* box download */
+#download {
+  display: flex;
+  justify-content: center;  
+}
+
+/* Card */
+.download-card {
+  width: 420px;             
+  max-width: 95%;           
+  border-radius: 10px;     
+}
+
+.download-card .card-body {
+  padding: 32px 28px;
+}

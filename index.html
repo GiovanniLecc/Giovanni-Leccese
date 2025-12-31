@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Barilla-report di sostenibilità</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  
+    <h1 class="logo-title">
+      <img src="immagini/barilla.png" alt="Barilla">
+      <span>REPORT DI SOSTENIBILITA'</span>
+    </h1>
+
+    <div class="image-box text-box">
+      <p>Consutlazione e <a href="#download">download</a> report</p>
+    </div>
+
+    <!-- Testo informazioni generali -->
+    <section class="intro container my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+          <div class= "image-box">
+            <h2 class="mb-3">Barilla e i report di sostenibilità</h2>
+
+
+
+            <p>
+              Barilla è una delle principali imprese italiane del settore agroalimentare e opera lungo
+              l’intera filiera produttiva, con particolare attenzione all’approvvigionamento delle
+              materie prime agricole e alla collaborazione con i produttori del settore primario.
+            </p>
+
+            <hr>
+
+            <h3> I report di sostenibilità</h3>
+
+            <p>
+              I report di sostenibilità sono documenti ufficiali attraverso i quali le aziende comunicano
+              in modo trasparente le proprie performance ambientali, sociali ed economiche.
+              Nel caso di Barilla, questi report illustrano le iniziative adottate per promuovere 
+              un’agricoltura sostenibile, ridurre l’impatto ambientale e garantire una gestione responsabile delle risorse.
+                    </p>
+                  </div>
+                </div>
+              </section>
+          </div>
+
+
+    <!-- download dei report -->
+    <section id="download" class="container my-5">
+      <div class="card download-card shadow-sm mx-auto">
+        <div class="card-body text-center">
+
+          <h3 class="mb-3">Download dei report</h3>
+
+          <p class="mb-1 fw-semibold">Report di Sostenibilità 2024</p>
+          <p class="text-muted mb-4">Formato PDF • Barilla</p>
+
+          <div class="download-action text-center mt-4">
+            <button class="btn btn-primary" data-report-name="Report di Sostenibilità 2024" data-report-url="https://drive.google.com/file/d/1bsu3gcfm-JT_-tHpZoYQCqSWhYMgZDpK/view?usp=drive_link" onclick="startDownload(this)"> Download </button>
+
+            <div class="progress d-none mt-3" style="height: 10px;">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%">               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
